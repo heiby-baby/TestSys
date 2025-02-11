@@ -39,7 +39,7 @@ TestSys позволяет:
 
 2. **Клонирование репозитория**:
    ```bash
-   https://github.com/heiby-baby/Project-Manager-Controller
-   cd Project-Manager-Controller
+   https://github.com/heiby-baby/TestSys
+   cd TestSys
    dotnet build
    dotnet run
