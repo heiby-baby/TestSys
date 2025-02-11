@@ -32,11 +32,17 @@ namespace TestSys
                     MessageBox.Show("Файл пуст или содержит только пробельные символы.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-                var test = JsonSerializer.Deserialize<Test>(json);
-                if(test == null)
+                Test test;
+                try
                 {
+                     test = JsonSerializer.Deserialize<Test>(json);
+                    if (test.TestName == null) throw new Exception();
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка при десериализации файла", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
-
                 }
                 new TakeTestWindow(test).ShowDialog();
             }
