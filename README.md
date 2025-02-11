@@ -28,10 +28,18 @@ TestSys позволяет:
 
 ---
 
-## Установка
-Убедитесь, что у вас установлен dotnet 
+## Установка и запуск
+
+1. **Установка .NET**:
+   - Убедитесь, что у вас установлен [.NET SDK](https://dotnet.microsoft.com/download).
+   - Проверьте установку, выполнив команду:
+     ```bash
+     dotnet --version
+     ```
+
+2. **Клонирование репозитория**:
    ```bash
-   git clone https://github.com/heiby-baby/TestSys
-   dotnet publish -c Release -r win-x64 --self-contained
-   cd TestSys\bin\Release\publish
-   .\TestSys.exe
+   https://github.com/heiby-baby/Project-Manager-Controller
+   cd Project-Manager-Controller
+   dotnet build
+   dotnet run
